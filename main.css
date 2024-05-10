@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {  
+    display: grid;
+    grid-template-columns: repeat( 4 , 1fr);
+    grid-template-rows: repeat( 3 , 1fr) 0.5fr ;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "sec1L sec1L sec1R sec1R"
+    "sec2L sec2C sec2C sec2R"
+    "sec3L sec3C sec3C sec2R"
+    "sec4L sec4C sec4R sec4R"; 
+}
+
+.sec1L { 
+    grid-area: sec1L;
+    display: flex;
+    padding: 0 4%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    font-family: Montserrat, sans-serif;
+    color: #9fa3a7;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+h3 {
+    margin: 20px 0;
+    font-family: Arvo, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 300;
+    width: 70%;
+}
+
+.grey-text{
+    color: #9fa3a7;
+    font-family: Montserrat, sans-serif;
+}
+
+.sec1L img {
+    width: 40%;
+    margin-top: 40px;
+}
+
+.sec1L .pic {
+    align-self: flex-end;
+}
+
+
+.sec1R {
+    grid-area: sec1R; 
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sec1R span {
+    font-family: Arvo, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    max-width: 70%;
+    margin: 20px 0;
+}
+
+.sec1R a {
+    color: #12c0e2;
+    font-family: Montserrat, sans-serif;
+}
+
+.sec2L {
+    grid-area: sec2L; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f05638;
+}
+
+.sec2L .text{
+    font-family: Arvo, sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    margin: 20px 0;
+}
+
+.sec2L a{
+    font-size: 18;
+    text-decoration: none;
+    color: #ffc70e;
+    text-align: center;
+}
+
+.sec2L img {
+    width: 100%;
+}
+
+.sec2C {
+    grid-area: sec2C; 
+    padding: 0 4%;
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.sec2C .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sec2C img {
+    width: 60%;
+    position: absolute;
+    left: -30%;
+    bottom: 0;
+    margin-top: 5%;
+}
+
+.sec2C a{
+    font-size: 10;
+    text-decoration: none;
+    color: rgb(0, 180, 180);
+    font-family: Montserrat, sans-serif;
+}
+
+.sec2C .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    align-self: start;
+}
+
+.sec2C .right .grey-text {
+    margin: 20px 0;
+}
+
+.sec2R {
+    grid-area: sec2R;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 5%;
+    background-color: #9979b9;
+    text-align: center;
+}
+
+.circle {
+    background-color: #8c6bae;
+    border-radius: 50%;
+    width: 380px;
+    height: 380px;
+}
+
+.sec2R .text {
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+    font-weight: 400;
+}
+
+.sec2R .special span{
+    background-color: #9979b9;
+    border-radius: 60px;
+    padding: 5px 15px;
+}
+
+.sec2R h3 {
+    font-family: Arvo, sans-serif;
+    font-size: 58px;
+    color: #fff;
+    font-weight: bold;
+    padding: 30px 0;
+}
+
+.sec2R img {
+    width: 50%;
+    padding: 10px 0;
+}
+
+.sec2R p{
+    color: #fff;
+    text-align: center;
+    width: 75%;
+}
+
+.sec2R a {
+    text-decoration: none;
+    background-color: #ffc70e;
+    padding: 20px 30px;
+    color: #000;
+    border-radius: 50px;
+    margin-top: 50px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+}
+
+.sec3L {
+    grid-area: sec3L;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.sec3L img {
+    width: 80%;
+    padding-right: 50px;
+}
+
+.sec3L h4 {
+    color: #000;
+    font-family: Arvo, sans-serif;
+    font-size: 36px;
+    padding: 20px 0 ;
+}
+
+.sec3L a {
+    font-size: 10;
+    text-decoration: none;
+    color: rgb(3, 187, 187);
+    font-family: Montserrat, sans-serif;
+    
+}
+
+.sec3C {
+    grid-area: sec3C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #93b6b7;
+    position: relative;
+}
+
+.sec3C img {
+    width: 90%;
+    margin-top: 100px;
+    position: absolute;
+    left: -5%;
+    bottom: 0;
+}
+
+.sec3C h3 {
+    color: #fff;
+    font-family: Arvo, sans-serif;
+    font-size: 36px;
+    padding: 20px 0 ;
+    margin-bottom: 150px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sec3C .top-right span {
+    display: flex;
+    align-items: start;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    font-size: 10px;
+    background-color: #f05638;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+}
+
+
+.sec4L {
+    grid-area: sec4L; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#35cfed;
+}
+
+.sec4L .circle {
+    padding: 50px 0;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    background-color: #12c0e2;
+}
+
+.sec4L h4 {
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.sec4C {
+    grid-area: sec4C; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.sec4C h4 {
+    font-family: Arvo, sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.sec4C .pop span {
+    background-color: yellowgreen;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+}
+
+.sec4R {
+    grid-area: sec4R; 
+    background-color: #2c2c2c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.sec4R img {
+    width: 50%;
+    position: relative;
+    left: -15%;
+}
+
+.sec4R .content {
+    width: 70%;
+    font-size: 32px;
+    font-family: Arvo, sans-serif;
+    color: #fff;
+}
+
+
+
+
+@media screen and (max-width: 990px){
+    .container{
+        grid-template-rows: repeat( 9 , 1fr);
+        grid-template-areas:
+        "sec1R sec1R sec1R sec1R" 
+        "sec1L sec1L sec1L sec1L"
+        "sec2L sec2L sec3L sec3L"
+        "sec2L sec2L sec3L sec3L"
+        "sec2C sec2C sec2C sec2C"
+        "sec3C sec3C sec2R sec2R"
+        "sec4L sec4L sec2R sec2R"
+        "sec4C sec4C sec4C sec4C"
+        "sec4R sec4R sec4R sec4R";
+    }
+}
+
+@media screen and (max-width: 480px){
+    .container {
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat( 13 , auto);        
+        grid-template-areas:
+        "sec1R" 
+        "sec1L"
+        "sec2C"
+        "sec2L"
+        "sec2R"
+        "sec3L"
+        "sec3C"
+        "sec4R"
+        "sec4L"
+        "sec4C";
+        /* background-color: red; */
+    }
+    .sec1R {
+        padding: 50px 0;
+    }
+    .sec1L {
+        padding: 40px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .sec1L img {
+        position: relative;
+        left: -15%;
+        width: 80%;
+    }
+    .sec1L h3 {
+        text-align: center;
+        transform: translate(50px);
+    }
+    .sec2C {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .sec2C img {
+        width: 200%;
+        position: relative;
+        top: 20px;
+        left: -120%;
+    }
+    .sec2C .left {
+        width: 100%;
+    }
+    .sec2C .right {
+        padding: 50px 0;
+    }
+    .sec2C h3 {
+        width: 100%;
+    }
+    .sec3L {
+        padding: 50px 0;
+    }
+    .sec4R {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .sec4R .content {
+        padding: 30px 0;
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    .sec4C {
+        padding: 40px 0;
+    }
+
+    
+}
